@@ -1,0 +1,5 @@
+.addItemForm{
+    display: grid;
+    grid-template-columns:80% 18%;
+}
+.mat-form-field{width:80%;}

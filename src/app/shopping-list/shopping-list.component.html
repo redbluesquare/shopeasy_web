@@ -1,0 +1,31 @@
+<div>
+    <button [routerLink]="['/']" routerLinkActive="router-link-active" style="float: right;">Back</button>
+    <h1>Shopping List</h1>
+</div>
+<div class="freqItems">
+    <h3>Frequent Items</h3>
+    <hr>
+    <ul class="slitems">
+        <li *ngFor="let freqitem of frequentItems" (click)="addItemToList(freqitem.product_title)"> {{freqitem.product_title}} </li>
+    </ul>
+</div>
+<div class="mainLeft">
+    <div class="addItemForm">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Add an item</mat-label>
+                <input matInput [(ngModel)]="product_title" name="product_title">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button (click)="addItemToList(product_title)">Add</button>
+        </div>
+    </div>
+</div>
+<div class="mainLeft">
+    <ul class="slitems">
+        <li *ngFor="let shoppingitem of shoppingList"> {{shoppingitem.product_title}} 
+            <span class="pull-right btn btn-danger link" (click)="delShoplistItem(shoppingitem)">X</span></li>
+    </ul>
+</div>
+

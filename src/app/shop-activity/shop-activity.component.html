@@ -1,0 +1,30 @@
+<div *ngIf="shopping_status == 0">
+    <div>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active" style="float: right;">Back</button>
+        <h1>Select a Shop</h1>
+    </div>
+    <div>
+        <div class="addItemForm">
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter a shop</mat-label>
+                    <input matInput [(ngModel)]="searchText" name="searchText">
+                </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button (click)="startShopping(searchText)">Start</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>.. or select from the list below</p>
+        <ul>
+            <li *ngFor="let shop of shops | filter : searchText" (click)="startShopping(shop.shop_title)">{{shop.shop_title}}</li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="shopping_status == 1">
+    <p>{{shop_id}}</p>
+
+</div>
+

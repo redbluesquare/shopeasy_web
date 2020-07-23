@@ -1,0 +1,5 @@
+.home{
+    display: grid;
+    grid-template-rows: 3;
+}
+.item{border:1px solid #ccc;padding:10px;font-size: 3em;margin: 5px;}

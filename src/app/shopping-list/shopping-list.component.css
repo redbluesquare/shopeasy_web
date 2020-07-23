@@ -1,0 +1,23 @@
+.mainLeft{
+    float: left;
+    width:70%;
+    margin-right: 5px;
+}
+.freqItems{
+    float: right;
+    width: 25%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding:10px;
+}
+.addItemForm{
+    display: grid;
+    grid-template-columns:80% 18%;
+}
+.mat-form-field{width:80%;}
+
+.slitems{list-style:none;padding-left: 0px;}
+.slitems>li{padding:5px;margin:3px;border:1px solid #ccc;border-radius: 4px;}
+.pull-right{float:right;}
+.btn{padding:3px 10px;border:1px solid #ccc;border-radius: 5px;position: relative;top:-4px;}
+.btn-danger{background: #791111;color:#fff;}

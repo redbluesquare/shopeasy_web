@@ -1,0 +1,13 @@
+<div class="home">
+    <div class="item link" [routerLink]="['/shopping-list']" routerLinkActive="router-link-active" >
+        <p *ngIf="shoppingList.length==0">Create a new List <span style="float:right">+</span></p>
+        <p *ngIf="shoppingList.length!=0">Edit the List </p>
+
+    </div>
+    <div class="item" *ngIf="shoppingList.length!=0" [ngClass]="{link: shoppingList.length!=0}" 
+            [routerLink]="['/shop-activity']" routerLinkActive="router-link-active" >
+        <p>Start Shopping</p>
+    </div>
+</div>
+
+
